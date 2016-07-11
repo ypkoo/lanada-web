@@ -4,4 +4,12 @@ from django.contrib import admin
 
 from .models import *
 
-# admin.site.register(Memory)
+class PhotoAdmin(admin.StackedInline):
+	model = Photo
+
+
+class MemoryAdmin(admin.ModelAdmin):
+	inlines = [PhotoAdmin,]
+
+
+admin.site.register(Memory, MemoryAdmin)

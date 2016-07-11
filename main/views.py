@@ -3,13 +3,16 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-	return render(request, 'main/index.html', {})
+	return render(request, 'index.html', {})
 
 def people(request):
-	return render(request, 'main/people.html', {})
+	return render(request, 'people.html', {})
 
 def awards(request):
-	return render(request, 'main/awards.html', {})
+	return render(request, 'awards.html', {})
 
 def research(request):
-	return render(request, 'main/research.html', {})
+	return render(request, 'research.html', {})
+
+def about(request):
+	return render(request, 'about.html', {})

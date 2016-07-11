@@ -1,9 +1,10 @@
 from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls.static import static
 
 from . import views
 
 urlpatterns = [
-	# url(r'^$', views.pub, name='pub'),
-	# url(r'book/$', views.book, name='book'),
-	
-]
+	url(r'^$', views.memory, name='memory'),
+	url(r'^(?P<title>.+)/$', views.memory_detail, name='memory detail'),
+] 

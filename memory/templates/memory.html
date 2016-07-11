@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}LANADA Conference Publication{% endblock title %}
+
+{% block content %}
+	<!-- Features -->
+	<div id="features-wrapper">
+		<div id="features">
+			<div class="container"> <br><br>
+				{% for memory in memory_list %}
+					{% if forloop.first %}<div class="row">{% endif %}
+						<div class="3u">
+							<section> 
+								<span class="bordered-feature-image"><a href="{{ memory.title }}"><img src="{{ MEDIA_URL }}{{ memory.main_thumbnail.url }}" width="240" height="160" border="0"></a></span>
+								<h2>{{ memory.title }}</h2>
+							</section>
+						</div>
+					{% if forloop.counter|divisibleby:4 %}</div><div class="row">{% endif %}
+					{% if forloop.last %}</div>{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
