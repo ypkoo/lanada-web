@@ -13,10 +13,14 @@ def memory(request):
 
 	return render(request, 'memory.html', context)
 
-def memory_detail(request, title):
+def detail(request, title):
 	from .models import Memory, Photo
 
-	memory = Memory.objects.get(title=title)
+	try:
+		memory = Memory.objects.get(title=title)
+	except Memory.DoesNotExist:
+		memory = None
+
 
 	photo_list = Photo.objects.filter(memory=memory)
 

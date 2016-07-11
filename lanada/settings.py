@@ -130,14 +130,8 @@ STATICFILES_DIRS = [
 
 TEMPLATE_DIRS = (
 	os.path.join(PROJECT_ROOT, "templates"),
-	# BASE_DIR + '/templates/',
-	# PROJECT_PATH + '/templates/',
-	# '/media/',
 )
 
-# MEDIA_ROOT = BASE_DIR + '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-MEDIA_ROOT = '/hdd/webdev/lanada-web/media'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 STATIC_ROOT = ''
-# MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'

@@ -6,5 +6,5 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.memory, name='memory'),
-	url(r'^(?P<title>.+)/$', views.memory_detail, name='memory detail'),
+	url(r'^(?P<title>.+)/$', views.detail, name='memory detail'),
 ] 
